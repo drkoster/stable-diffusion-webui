@@ -1,6 +1,18 @@
 # Stable Diffusion web UI
 A web interface for Stable Diffusion, implemented using Gradio library.
 
+## Fork made to test and verify CPU only
+Testing fork with arguments needed to run cpu only. Testing done on dual socket AMD EPYC system. 
+`--use-cpu all no-half --skip-torch-cuda-test` 
+Additional flags for local network access:
+`--listen --port xxxxx --enable-insecure-extension-access`
+
+Additional info:
+Pytorch by default will use 50% of cpu cores available due to hyperthreading hurting performance. 
+Experiment with number of cores when using hypervisor. 
+
+An ubuntu server vm environment needs 64Gb of ram assigned at least. 
+
 ![](screenshot.png)
 
 ## Features
