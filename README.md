@@ -2,16 +2,22 @@
 A web interface for Stable Diffusion, implemented using Gradio library.
 
 ## Fork made to test and verify CPU only
-Testing fork with arguments needed to run cpu only. Testing done on dual socket AMD EPYC system. 
-`--use-cpu all no-half --skip-torch-cuda-test` 
-Additional flags for local network access:
-`--listen --port xxxxx --enable-insecure-extension-access`
+Testing fork with arguments needed to run cpu only. Testing done on dual socket AMD EPYC system.__ 
+`--use-cpu all no-half --skip-torch-cuda-test`__ 
+Additional flags for local network access:__
+`--listen --port xxxxx --enable-insecure-extension-access`__
 
-Additional info:
+### Additional info:
 Pytorch by default will use 50% of cpu cores available due to hyperthreading hurting performance. 
 Experiment with number of cores when using hypervisor. 
 
-An ubuntu server vm environment needs 64Gb of ram assigned at least. 
+Recommended for ubuntu server:
+- An ubuntu server vm environment needs 64Gb of ram assigned at least. 
+- Use Ubuntu 22.04 for best compatibility with extensions and pytorch
+
+To reduce memory usage install the following packages:
+`sudo apt install libgoogle-perftools4 libtcmalloc-minimal4 libgoogle-perftools-dev`
+
 
 ![](screenshot.png)
 
