@@ -10,6 +10,8 @@ Additional flags for local network access:
 
 `--listen --port xxxxx --enable-insecure-extension-access`
 
+Results from testing can be found in benchmarks.md
+
 ### Additional info:
 Pytorch by default will use 50% of cpu cores available due to hyperthreading hurting performance. 
 Experiment with number of cores when using hypervisor. 
